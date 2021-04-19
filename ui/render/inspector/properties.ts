@@ -28,8 +28,8 @@ export function renderProperties(layerData: LayerData): string {
         '</div>'
     ].join('') : '';
     let styleName = (layerData.styleName) ? [
-        '<div class="item" data-label="' + localize('Style') + ':">',
-        '<label><input id="styleName" type="text" value="' + layerData.styleName + '" readonly="readonly"></label>',
+        '<div class="item bold" data-label="' + localize('Style') + ':">',
+        '<label><div id="styleName" class="multi-line">' + layerData.styleName + '</div></label>',
         '</div>'
     ].join('') : '';
     return propertyType('PROPERTIES', [position, size, opacity, radius, styleName].join(''));

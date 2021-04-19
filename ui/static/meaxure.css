@@ -800,6 +800,9 @@ main {
     display: flex;
     margin: 0 0 8px;
 }
+.inspector .item.bold {
+    font-weight: bold;
+}
 
 .inspector .item[data-label]:before {
     content: attr(data-label);
@@ -858,6 +861,18 @@ main {
     text-align: center;
     outline: 0;
     resize: none;
+}
+
+.inspector .multi-line {
+    padding: 3px 4px;
+    width: 100%;
+    background: rgba(255, 255, 255, .05);
+    border-radius: 2px;
+    border: 0;
+    font-size: 12px;
+    color: #FFF;
+    user-select: text;
+    cursor: text;
 }
 
 .inspector textarea {
