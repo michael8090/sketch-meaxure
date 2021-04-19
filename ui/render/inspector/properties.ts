@@ -28,7 +28,7 @@ export function renderProperties(layerData: LayerData): string {
         '</div>'
     ].join('') : '';
     let styleName = (layerData.styleName) ? [
-        '<div class="item bold" data-label="' + localize('Style') + ':">',
+        '<div class="item bold white" data-label="' + localize('Style') + ':">',
         '<label><div id="styleName" class="multi-line">' + layerData.styleName + '</div></label>',
         '</div>'
     ].join('') : '';

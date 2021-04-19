@@ -803,6 +803,9 @@ main {
 .inspector .item.bold {
     font-weight: bold;
 }
+.inspector .item.white::before {
+    color: #fff;
+}
 
 .inspector .item[data-label]:before {
     content: attr(data-label);
