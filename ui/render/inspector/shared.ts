@@ -6,7 +6,7 @@ export function colorItem(color: SMColor): string {
     colorName = (colorName) ? ' data-name="' + colorName + '"' : '';
     return [
         '<div class="color"' + colorName + '>',
-        '<label><em><i style="background-color:' + color['css-rgba'] + ';"></i></em></label><input data-color="' + encodeURI(JSON.stringify(color)) + '" type="text" value="' + color[state.colorFormat] + '" readonly="readonly">',
+        '<label><em><i style="background-color:' + color['css-rgba'] + ';"></i></em></label><input data-color="' + encodeURI(JSON.stringify(color)) + '" type="text" value="' + color[state.colorFormat] + '" readonly="readonly">' + '<input type="text" value="' + colorName + '" readonly="readonly">',
         '</div>'
     ].join('');
 }
