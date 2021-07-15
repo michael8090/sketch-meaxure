@@ -2,6 +2,7 @@ import { localize } from "../../common";
 import { LayerData } from "../../../src/meaxure/interfaces";
 import { unitSize } from "../helper";
 import { colorItem, propertyType } from "./shared";
+import { colorTokenItem } from "./colorToken";
 export function renderBorders(layerData: LayerData): string {
     if (!layerData.borders || !layerData.borders.length)
         return '';
@@ -19,7 +20,7 @@ export function renderBorders(layerData: LayerData): string {
             borders.push('</div>');
         }
         borders.push('</div>');
-        borders.push('</div>');
+        borders.push('<div class="item" data-label="' + localize('Color token') + ':">',colorTokenItem(border.color),'</div>');
     }
     return propertyType('BORDERS', borders.join(''));
 }
