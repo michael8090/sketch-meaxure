@@ -1,6 +1,7 @@
 import { localize } from "../../common";
 import { LayerData } from "../../../src/meaxure/interfaces";
 import { colorItem, propertyType } from "./shared";
+import { colorTokenItem } from "./colorToken";
 export function renderFills(layerData: LayerData): string {
     if (!layerData.fills || !layerData.fills.length)
         return '';
@@ -18,6 +19,7 @@ export function renderFills(layerData: LayerData): string {
             fills.push('</div>');
         }
         fills.push('</div>');
+        fills.push('<div class="item" data-label="' + localize('Color token') + ':">',colorTokenItem(fill.color),'</div>');
     }
     return propertyType('FILLS', fills.join(''));
 }
