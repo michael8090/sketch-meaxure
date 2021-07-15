@@ -2,6 +2,7 @@ import { localize } from "../../common";
 import { LayerData } from "../../../src/meaxure/interfaces";
 import { unitSize } from "../helper";
 import { colorItem, propertyType } from "./shared";
+import { colorTokenItem } from "./colorToken";
 export function renderFont(layerData: LayerData): string {
     if (layerData.type != 'text')
         return '';
@@ -10,9 +11,15 @@ export function renderFont(layerData: LayerData): string {
         '<label><input id="font-family" type="text" value="' + layerData.fontFace + '" readonly="readonly"></label>',
         '</div>'
     ].join(''), textColor = [
-        '<div class="item" data-label="' + localize('Color') + ':">',
+        '<div class="item" data-label="' + localize('Color') + ':">', 
         '<div class="color">',
         colorItem(layerData.color),
+        '</div>',
+        '</div>'
+    ].join(''), textColor = [
+        '<div class="item" data-label="' + localize('Color token') + ':">', 
+        '<div class="color">',
+        colorTokenItem(layerData.color),
         '</div>',
         '</div>'
     ].join(''), fontSize = (layerData.fontSize) ? [
