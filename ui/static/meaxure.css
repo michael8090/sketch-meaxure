@@ -919,15 +919,6 @@ main {
     display: block;
 }
 
-.inspector .color[data-name]:after {
-    content: attr(data-name);
-    font-size: 10px;
-    text-align: center;
-    padding: 0 0 0 24px;
-    display: block;
-    margin: 2px 0 0;
-}
-
 .inspector .color label,
 .inspector .color label em,
 .inspector .color label em i {
